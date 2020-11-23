@@ -48,9 +48,9 @@ include_directories(
     ${roscpp_INCLUDE_DIRS}
 )
 
-catkin_install_python(PROGRAMS scripts/feature_tracker.py
+catkin_install_python(PROGRAMS scripts/feature_tracker.py scripts/test.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
-add_executable(${PROJECT_NAME}_node src/feature_tracker_node.cpp src/feature_tracker.cpp)
-target_link_libraries(${PROJECT_NAME}_node ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} ${roscpp_LIBRARIES})
+#add_executable(${PROJECT_NAME}_node src/feature_tracker_node.cpp src/feature_tracker.cpp)
+#target_link_libraries(${PROJECT_NAME}_node ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} ${roscpp_LIBRARIES})
